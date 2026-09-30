@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "next dev -p 3100",
     "build": "next build",
-    "start": "next start -p 3100"
+    "start": "next start -p ${PORT:-3100}"
   },
   "dependencies": {
-    "@ai-sdk/google-vertex": "^4.0.208",
+    "@ai-sdk/google": "^4.0.86",
     "ai": "^7.0.123",
     "leaflet": "^1.9.4",
     "next": "^16.3.3",
