@@ -1,0 +1,3 @@
+# Nixpacks defaults to Node 18, and Next 16 refuses anything below 20.9.
+[phases.setup]
+nixPkgs = ["nodejs_22"]
