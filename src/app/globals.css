@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+body {
+  background: #f8fafc;
+}
+
+button,
+[role="button"],
+select,
+input[type="checkbox"],
+label:has(input[type="checkbox"]) {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+
+.leaflet-container {
+  font-family: inherit;
+  background: #eef2f6;
+  cursor: crosshair;
+}
+.leaflet-interactive {
+  cursor: pointer;
+}
+
+.site-pin {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+.site-pin span {
+  position: absolute;
+  inset: 8px;
+  border-radius: 9999px;
+  background: #4f46e5;
+  border: 2px solid white;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.35);
+}
+.site-pin::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: rgb(79 70 229 / 0.35);
+  animation: pin-pulse 1.8s ease-out infinite;
+}
+@keyframes pin-pulse {
+  from {
+    transform: scale(0.4);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
